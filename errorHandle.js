@@ -1,9 +1,4 @@
-const headers = {
-    'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
-    'Access-Control-Allow-Origin':'*',
-    'Access-Control-Allow-Methods' : 'GET, POST, PATCH, OPTIONS, DELETE',
-    'Content-Type' : 'application/json'
-};
+const headers = require('./headers.js'); // 載入 headers 物件資訊
 
 // 錯誤情況 {title,id} 的 title 拼錯導致 undefined
 function errorTitleUndefined(res){

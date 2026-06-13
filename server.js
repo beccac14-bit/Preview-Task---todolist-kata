@@ -1,12 +1,7 @@
 const { v4: uuidv4 } = require('uuid'); //載入 uuid 模組
 const http = require("http"); // 載入 node.js 本身 http 模組
 const todos = [];
-const headers = {
-    'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
-    'Access-Control-Allow-Origin':'*',
-    'Access-Control-Allow-Methods' : 'GET, POST, PATCH, OPTIONS, DELETE',
-    'Content-Type' : 'application/json'
-};
+const headers = require('./headers.js'); // 載入 headers 物件資訊
 
 // 載入 errorHandle.js 的 error 處理函式
 const {errorTitleUndefined,
